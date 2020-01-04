@@ -1,0 +1,15 @@
+{
+  "name": "amqp-pub-sub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqp-connection-manager": "^3.1.0",
+    "amqplib": "^0.5.5"
+  }
+}
