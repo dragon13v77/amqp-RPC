@@ -31,11 +31,12 @@ amqp.connect(LOCAL_URL, function (error0, connection) {
 
 			console.log(" [.] fib(%d)", n);
 
-			var r = fibonacci(n);
+			var result = fibonacci(n);
 
+			// Then we enter the callback function where do the work and send the response back.
 			channel.sendToQueue(
 				msg.properties.replyTo,
-				Buffer.from(r.toString()),
+				Buffer.from(result.toString()),
 				{
 					correlationId: msg.properties.correlationId
 				}
